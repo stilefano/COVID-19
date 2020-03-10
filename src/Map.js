@@ -5,6 +5,7 @@ import {
     Marker,
     TileLayer
 } from "react-leaflet"
+
 import useGetCoordinates from "./Hooks/useGetCoordinates"
 
 export default function Map() {
