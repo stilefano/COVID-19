@@ -21,7 +21,3 @@ code {
     background: transparent;
     border: none;
 }
-
-.leaflet-map-pane svg {
-    transform: translate(-41%, -20%);
-}

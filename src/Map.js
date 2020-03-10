@@ -12,8 +12,8 @@ const svg =
 const iconUrl = "data:image/svg+xml;base64," + btoa(svg)
 
 const icon = L.divIcon({
-    iconSize: [25, 36],
-    html: `<svg width="135px" height="100px"> <circle cx="67" cy="50" r="10" fill="red" /></svg>`
+    iconSize: [30, 30],
+    html: `<svg width="30px" height="30px"> <circle cx="15" cy="15" r="15" fill="red" /></svg>`
 })
 
 export default function Map() {
