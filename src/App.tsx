@@ -5,7 +5,14 @@ import Map from "./Map"
 function App() {
     return (
         <div className="App">
-            <h1 style={{ position: "fixed", left: 0, right: 0,zIndex:9999 }}>
+            <h1
+                style={{
+                    position: "fixed",
+                    left: "100px",
+                    right: "100px",
+                    zIndex: 9999
+                }}
+            >
                 COVID-19 Map
             </h1>
             <Map />
