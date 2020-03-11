@@ -7,14 +7,17 @@ import {
 } from "react-leaflet"
 import L from "leaflet"
 import useGetCoordinates from "./Hooks/useGetCoordinates"
-const svg =
-    '<svg height="100" width="100"> <circle cx="50" cy="50" r="40" stroke="black" fill="red" /> Sorry, your browser does not support inline SVG. </svg>' /* insert your own svg */
-const iconUrl = "data:image/svg+xml;base64," + btoa(svg)
 
-const icon = L.divIcon({
-    iconSize: [30, 30],
-    html: `<svg width="30px" height="30px"> <circle cx="15" cy="15" r="15" fill="red" /></svg>`
-})
+const icon = c => {
+    const cases = parseFloat(c.cases.replace(/,/g, ""))
+    const color = cases > 1000 ? "#FF0000" : cases > 500 ? "#ff8100" : "#fdff6c"
+    const size = cases > 1000 ? 15 : cases > 500 ? 10 : 8
+
+    return L.divIcon({
+        iconSize: [30, 30],
+        html: `<svg width="30px" height="30px"> <circle cx="15" cy="15" r="${size}" fill="${color}" /></svg>`
+    })
+}
 
 export default function Map() {
     const coordinates = useGetCoordinates()
@@ -30,7 +33,8 @@ export default function Map() {
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                     {coordinates.map(c => (
                         <Marker
-                            icon={icon}
+                            key={c.country_name}
+                            icon={icon(c)}
                             position={[
                                 parseFloat(c.latlng[0]),
                                 parseFloat(c.latlng[1])
