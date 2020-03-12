@@ -45,12 +45,11 @@ export default function Map() {
                                 <p>
                                     Cases: <strong>{c.cases}</strong> <br />
                                     Deaths: <strong>{c.deaths}</strong> <br />
-                                    Region: <strong>{c.region}</strong> <br />
                                     Total recovered:{" "}
                                     <strong>{c.total_recovered}</strong> <br />
                                     New deaths: <strong>{c.new_deaths}</strong>
                                     <br />
-                                    Serious/Critical:{" "}
+                                    Serious/Critical:
                                     <strong>{c.serious_critical}</strong>
                                 </p>
                             </LeafletPopup>
