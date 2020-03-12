@@ -1263,7 +1263,7 @@ export const cc = [
     },
     {
         code: "gb",
-        name: "United Kingdom",
+        name: "UK",
         path: "uk",
         latlng: ["54.0000", "-2.0000"]
     },
