@@ -1269,7 +1269,7 @@ export const cc = [
     },
     {
         code: "us",
-        name: "United States",
+        name: "USA",
         path: "usa",
         latlng: ["38.0000", "-97.0000"]
     },
