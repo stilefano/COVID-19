@@ -1105,7 +1105,7 @@ export const cc = [
     },
     {
         code: "kr",
-        name: "South Korea",
+        name: "S. Korea",
         path: "southkorea",
         latlng: ["37.0000", "127.5000"]
     },
