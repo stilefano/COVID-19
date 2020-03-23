@@ -44,6 +44,9 @@ export default function Map() {
                                 <LeafletPopup>
                                     <h4>{c.country_name}</h4>
                                     <p>
+                                        New cases:{" "}
+                                        <strong>{c.new_cases}</strong>
+                                        <br />
                                         Cases: <strong>{c.cases}</strong> <br />
                                         Deaths: <strong>{c.deaths}</strong>{" "}
                                         <br />
