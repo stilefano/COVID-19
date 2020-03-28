@@ -10,7 +10,14 @@ import useGetCoordinates from "./Hooks/useGetCoordinates"
 
 const icon = c => {
     const cases = parseFloat(c.cases.replace(/,/g, ""))
-    const color = cases > 1000 ? "#FF0000" : cases > 500 ? "#ff8100" : "#fdff6c"
+    const color =
+        cases > 50000
+            ? "#820505"
+            : cases > 1000
+            ? "#FF0000"
+            : cases > 500
+            ? "#ff8100"
+            : "#fdff6c"
     const size = cases > 1000 ? 15 : cases > 500 ? 10 : cases < 100 ? 5 : 9
 
     return L.divIcon({

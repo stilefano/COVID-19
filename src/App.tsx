@@ -10,7 +10,8 @@ function App() {
                     position: "fixed",
                     left: "100px",
                     right: "100px",
-                    zIndex: 9999
+                    zIndex: 9999,
+                    pointerEvents: "none"
                 }}
             >
                 COVID-19 Map
